@@ -6,7 +6,7 @@
 /*   By: diodos-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 11:46:56 by diodos-s          #+#    #+#             */
-/*   Updated: 2023/04/19 15:36:25 by diodos-s         ###   ########.fr       */
+/*   Updated: 2023/04/20 16:11:13 by diodos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,5 +44,11 @@ char		*ft_strjoin(char const *s1, char const *s2);
 void		ft_putchar_fd(char c, int fd);
 void		ft_putstr_fd(char *s, int fd);
 void		ft_putendl_fd(char *s, int fd);
+void		ft_putnbr_fd(int n, int fd);
+char		*ft_strtrim(char const *s1, char const *set);
+char		*ft_itoa(int n);
+char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void		ft_striteri(char *s, void (*f)(unsigned int, char *));
+char		**ft_split(char const *s, char c);
 
 #endif
