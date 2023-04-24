@@ -6,7 +6,7 @@
 /*   By: diodos-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/20 15:27:43 by diodos-s          #+#    #+#             */
-/*   Updated: 2023/04/20 16:13:01 by diodos-s         ###   ########.fr       */
+/*   Updated: 2023/04/24 14:49:33 by diodos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,12 +63,12 @@ char	**ft_split(char const *s, char c)
 	int		j;
 
 	i = 0;
-	j = -1;
+	j = 0;
 	word = ft_count_word(s, c);
 	strs = (char **)malloc((word + 1) * sizeof(char *));
 	if (!strs)
 		return (NULL);
-	while (++j < word)
+	while (j < word)
 	{
 		while (s[i] == c)
 			i++;
@@ -77,6 +77,7 @@ char	**ft_split(char const *s, char c)
 		if (!strs)
 			ft_free(strs, j);
 		i += size;
+		j++;
 	}
 	strs[j] = 0;
 	return (strs);
