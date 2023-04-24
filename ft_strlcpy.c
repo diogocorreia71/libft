@@ -6,7 +6,7 @@
 /*   By: diodos-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 15:05:51 by diodos-s          #+#    #+#             */
-/*   Updated: 2023/04/17 15:09:59 by diodos-s         ###   ########.fr       */
+/*   Updated: 2023/04/24 12:49:16 by diodos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	size_t	srcsize;
 	size_t	i;
 
-	if (!dst || !src)
+	if (!dst && !src && size == 0)
 		return (0);
 	srcsize = ft_strlen(src);
 	i = 0;
