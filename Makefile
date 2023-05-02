@@ -6,7 +6,7 @@
 #    By: diodos-s <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/17 13:15:35 by diodos-s          #+#    #+#              #
-#    Updated: 2023/04/24 13:16:13 by diodos-s         ###   ########.fr        #
+#    Updated: 2023/05/02 08:56:24 by diodos-s         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,12 +39,8 @@ clean:
 
 fclean: clean
 	${RM} ${NAME}
-	${RM} teste
 
-teste:
-	${CC} ${CFLAGS} ${INCLUDE} main.c ${NAME} -o teste
-
-re:	fclean all teste
+re:	fclean all
 
 bonus:	${OBJS} ${OBJSB}
 	ar rcs ${NAME} ${OBJS} ${OBJSB} ${HEADER}
